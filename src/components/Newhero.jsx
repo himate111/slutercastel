@@ -24,7 +24,7 @@ export default function Hero() {
   <ul className="nav-links">
     <li onClick={() => scrollToSection("home")}>Home</li>
     <li onClick={() => scrollToSection("properties")}>Properties</li>
-    <li onClick={() => scrollToSection("contact")}>Contact Us</li>
+    <li onClick={() => scrollToSection("contact")}>Contact</li>
   </ul>
 </nav>
 
