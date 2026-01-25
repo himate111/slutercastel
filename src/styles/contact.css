@@ -1,0 +1,152 @@
+/* PAGE */
+.contact {
+  width: 100vw;
+  height: 100vh;
+  padding: 0;                 /* 🔴 remove padding */
+  background: #f5f7f6;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.contact-wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  border-radius: 0;           /* full bleed */
+  overflow: hidden;
+}
+
+
+
+
+.contact-form {
+  position: absolute;
+  top: 20px;
+  left: 60px;
+   padding: 40px 40px 24px;
+
+  width: 420px;
+  height: 620px;       /* enough space */
+  padding: 40px;
+
+  background: rgb(255, 255, 255);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+
+
+/* TITLE */
+.contact-form h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 32px;
+}
+
+/* INPUT GRID */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.contact-form label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+  opacity: 0.9;
+}
+
+/* INPUTS */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: rgb(122, 224, 252);
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  color: black;
+  font-size: 14px;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: black;
+}
+
+/* MESSAGE */
+.message-box textarea {
+  height: 60px;
+  resize: none;
+}
+
+/* BUTTON */
+.send-btn {
+  margin-top: 24px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* RIGHT IMAGE */
+
+.contact-image {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* 🔥 key line */
+  display: block;
+}
+
+.contact-form {
+  padding: 40px 40px 24px;
+}
+
+.send-btn {
+  margin-top: 16px;
+}
+
+.contact-form {
+  top: 50px;
+  left: 60px;
+  width: 420px;
+  height: 540px;
+  padding: 40px 40px 24px;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+  background: rgba(45, 170, 180, 0.25); /* 🎯 image-matched */
+  border: 1px solid rgba(45, 170, 180, 0.4);
+  color: #0f172a;
+}
+
+.contact-form {
+  position: absolute;
+  top: 50%;
+  left: 80px;
+  transform: translateY(-50%);
+  z-index: 2;
+
+  width: 500px;          /* 👈 bigger */
+  min-height: 620px;     /* 👈 taller */
+  height: auto;
+
+  padding: 48px 48px 32px;
+  background: rgba(255,255,255,0.95);
+  border-radius: 28px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.18);
+}

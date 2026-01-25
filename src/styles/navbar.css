@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  padding: 0 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+}
+
+/* LOGO */
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: black;
+}
+
+.logo span {
+  font-size: 28px;
+}
+
+/* CENTER NAV */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+}
+
+.nav-links li {
+  font-size: 15px;
+  color: #888;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 20px;   /* try 32px or 36px */
+}
+
+
+
+
+
+
+/* NAV ACTIVE DOT */
+.nav-links li.active {
+  color: black;
+  font-weight: 500;
+}
+
+.nav-links li.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 6px;
+  height: 2px;
+  background: black;
+  border-radius: 2px;
+}
+
+.login{
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 5px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* SIGNUP BASE STATE (IMPORTANT) */
+.signup {
+  background: transparent;
+  color: black;
+  border: 1px solid black;
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* LOGIN / SIGNUP ACTIVE */
+.auth-active {
+  background: black !important;
+  color: white !important;
+  padding: 8px 16px;
+  border-radius: 14px;
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 12px 14px;
+  }
+
+  /* MOVE LOGO LEFT */
+  .logo {
+    margin-right: 8px;
+    font-size: 19px;
+    white-space: nowrap;
+      position: relative;
+  left: -20px; 
+  }
+
+  /* CENTER MENU — EXACT CENTER */
+  .nav-links {
+    flex: 1;
+    justify-content: center;
+    gap: 12px;
+     position: relative;
+  left: -25px; 
+  }
+
+  .nav-links li {
+    font-size: 13px;
+  }
+
+  /* PUSH ACTIONS RIGHT */
+  .nav-actions {
+    margin-left: auto;
+    gap: 8px;
+  }
+
+  .signup {
+    padding: 6px 10px;
+    font-size: 12px;
+  }
+}
+
+

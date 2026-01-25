@@ -1,0 +1,441 @@
+* {
+  box-sizing: border-box;
+}
+
+.hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 40px;
+  background-color:white ;
+  margin-top: -20px; 
+}
+
+/* IMAGE CONTAINER */
+.hero-image {
+  width: 100%;
+  height: 85vh;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;          /* 🔥 natural height */
+  object-fit: contain;   /* 🔥 NO CUTTING */
+  display: block;
+}
+
+/* TEXT OVER IMAGE */
+.hero-content {
+  position: absolute;
+  top: 120px;
+  left: 100px;     /* ✅ move to LEFT */
+  right: auto;
+  max-width: 520px;
+}
+
+
+
+.hero-content h1 {
+  font-size: 52px;
+  font-weight: 600;
+  line-height: 1.2;
+  font-family: "Grobold";
+}
+
+.hero-content p {
+  margin-top: 16px;
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* SEARCH CARD */
+.search-card {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  background: white;
+  border-radius: 16px;
+  padding: 24px 32px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+}
+
+/* BUY / RENT */
+.tab {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 16px;
+}
+
+.tab span {
+  font-weight: 500;
+  color: #999;
+  cursor: pointer;
+}
+
+.tab .active {
+  color: black;
+  position: relative;
+}
+
+.tab .active::after {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: black;
+}
+
+/* FILTERS */
+.filters {
+  display: flex;
+  gap: 24px;
+  align-items: end;
+}
+
+.filters div {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.filters label {
+  font-size: 12px;
+  color: #777;
+  margin-bottom: 6px;
+}
+
+.filters select {
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+/* SEARCH BUTTON */
+.search-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.hero-btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 28px 0 40px;
+}
+
+.hero-stats {
+  margin-top: 30px;
+  display: flex;
+  gap: 60px;
+}
+
+.hero-stats h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.hero-stats span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.hero-content p,
+.hero-stats span {
+  color: #333;
+}
+
+.hero-content {
+  color: black;
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* HERO CONTAINER */
+  .hero {
+    padding: 16px;
+  }
+
+  .hero-wrapper {
+    margin-top: 0px;   /* 👈 moves hero down */
+  }
+
+  .hero-container {
+    flex-direction: column;
+    border-radius: 22px;
+    overflow: hidden;
+  }
+
+  /* IMAGE */
+  .hero-image {
+    width: 100%;
+    height: 42vh;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* TEXT */
+  .hero-content {
+    padding: 20px 18px;
+    text-align: left;
+  }
+
+
+  /* STATS */
+  .hero-stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 18px;
+    gap: 12px;
+  }
+
+  .hero-stats h3 {
+    font-size: 20px;
+  }
+
+  .hero-stats span {
+    font-size: 12px;
+  }
+
+  /* SEARCH BOX */
+  .search-box {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+    margin-top: 20px;
+  }
+
+  .search-field {
+    width: 100%;
+  }
+
+  .search-button {
+    width: 100%;
+    height: 44px;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 768px) {
+
+  /* BREAK OUT OF CENTERED CONTAINER */
+  .hero {
+    padding: 0;              /* remove side padding */
+  }
+
+  .hero-container {
+    border-radius: 0;        /* remove rounded card look */
+  }
+
+  /* FULL-WIDTH IMAGE */
+  .hero-image {
+    width: 100vw;            /* full viewport width */
+    margin-left: calc(-50vw + 50%);
+    height: 45vh;
+    border-radius: 0;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  /* HERO IMAGE FULL WIDTH (already done) */
+  .hero-image {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    height: 45vh;
+    position: relative;
+  }
+
+  /* PLACE TEXT ON TOP OF IMAGE */
+  .hero-content {
+    position: absolute;
+    top: 27%;
+    left : 10px;          /* 👈 pushes text to the right */
+    transform: translateY(-50%);
+    max-width: 70%;       /* prevents overflow */
+    text-align: left;
+    color: black;
+  }
+
+  .hero-content h1 {
+    font-size: 22px;
+    line-height: 1.2;
+  }
+
+  .hero-content p {
+    font-size: 12px;
+    margin-top: 8px;
+  }
+}
+
+
+
+@media (max-width: 768px) {
+
+  /* SEARCH CONTAINER */
+  .search-box {
+    flex-direction: column;
+    gap: 14px;
+    padding: 16px;
+  }
+
+  /* EACH FIELD FULL WIDTH */
+  .search-field {
+    width: 100%;
+  }
+
+  /* PROPERTY TYPE FIX */
+  .search-field select {
+    width: 100%;
+    padding: 12px 40px 12px 12px; /* space for arrow */
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+
+  /* PREVENT TEXT OVERFLOW */
+  .search-field select,
+  .search-field span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  /* SEARCH CARD */
+  .search-card {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px 16px;
+    bottom: 40%;
+  }
+
+  /* GRID LAYOUT */
+  .filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;   /* 👈 SIDE BY SIDE */
+    gap: 16px;
+    align-items: end;
+  }
+
+  /* EACH FIELD */
+  .filters div {
+    width: 100%;
+  }
+
+  /* FULL WIDTH PRICE RANGE */
+  .filters div:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  /* SEARCH BUTTON FULL WIDTH */
+  .search-btn {
+    grid-column: span 2;
+    width: 100%;
+    height: 46px;
+    border-radius: 12px;
+    font-size: 15px;
+  }
+
+  /* SELECT FIX */
+  .filters select {
+    width: 100%;
+    padding: 12px 36px 12px 12px;
+    font-size: 14px;
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-wrapper {
+    padding: 0;        /* 🔥 THIS is the blocker */
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-image {
+    width: 100vw;
+    height: 45vh;
+    margin-left: calc(-50vw + 50%);
+    border-radius: 0;
+    overflow: hidden;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  .search-card {
+    position: relative;
+    margin-top:-110px;   /* 👈 THIS overlays the image */
+    width: 100%;
+    padding: 20px 16px;
+    z-index: 10;         /* stays above image */
+  }
+}
+
+
+
+
+
+@media (max-width: 768px) {
+  .hero-image {
+    width: 100vw;
+    height: auto;                /* 🔥 let image decide height */
+    margin-left: calc(-50vw + 50%);
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: auto;                /* 🔥 natural height */
+    object-fit: contain;         /* 🔥 NO cropping */
+  }
+}

@@ -1,0 +1,85 @@
+.services {
+  padding: 100px 120px;
+  background: #ffffff;
+}
+
+/* HEADER */
+.services-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-header h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.services-header p {
+  font-size: 14px;
+  color: #888;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.service-card {
+  background: #f2f4fb;
+  border-radius: 16px;
+  padding: 32px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: 0.3s ease;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* ICON */
+.icon {
+  font-size: 32px;
+}
+
+/* ACTIVE CARD */
+.service-card.active {
+  background: #2f3fa0;
+  color: white;
+}
+
+.service-card.active p {
+  color: #e0e3ff;
+}
+
+/* CTA */
+.services-cta {
+  margin-top: 48px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.services-cta button {
+  background: #2f3fa0;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.services-cta span {
+  margin-left: 6px;
+}

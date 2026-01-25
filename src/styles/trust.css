@@ -1,0 +1,164 @@
+.trust-section {
+  padding: 80px 40px;
+  background: #fff;
+}
+
+.trust-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+/* LEFT */
+.trust-left {
+  flex: 1;
+}
+
+.trust-left h2 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.trust-left p {
+  margin-top: 16px;
+  font-size: 15px;
+  color: #666;
+  max-width: 520px;
+}
+
+.trust-stats {
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.stat-card {
+  background: #f4f5fa;
+  padding: 22px;
+  border-radius: 14px;
+}
+
+.stat-card h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.stat-card span {
+  font-size: 14px;
+  color: #666;
+}
+
+.stat-card {
+  background: #f4f5fa;
+  padding: 22px;
+  border-radius: 14px;
+  transition: all 0.3s ease;   /* smooth animation */
+  cursor: pointer;
+}
+
+/* HOVER EFFECT */
+.stat-card:hover {
+  background: #2f3490;
+  color: white;
+  transform: translateY(-4px);
+}
+
+/* TEXT COLOR ON HOVER */
+.stat-card:hover span {
+  color: #e0e0ff;
+}
+
+
+/* RIGHT IMAGES */
+.trust-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* TOP IMAGE */
+.img-main {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.img-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.img-row img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.trust-right img {
+  width: 100%;
+  border-radius: 18px;
+  object-fit: cover;
+}
+
+.img-top {
+  height: 220px;
+}
+
+.img-bottom {
+  height: 260px;
+  margin-top: -40px;
+  margin-left: 40px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .trust-container {
+    flex-direction: column;
+  }
+
+  .trust-left h2 {
+    font-size: 26px;
+  }
+
+  .trust-stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .trust-right {
+    width: 100%;
+  }
+
+  .img-bottom {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+}
+
+
+
+
+
+
+.img-row {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr; /* third image slightly wider */
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* SECOND IMAGE (LEFT - SMALLER) */
+.img-row img:first-child {
+  height: 180px;     /* 👈 smaller */
+}
+
+/* THIRD IMAGE (RIGHT - FULL LENGTH) */
+.img-row img:last-child {
+  height: 280px;     /* 👈 taller / full length */
+}

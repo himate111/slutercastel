@@ -1,0 +1,307 @@
+.hero {
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center 80%;
+  position: relative;
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.06); /* subtle overlay */
+  z-index: 1;
+}
+
+
+
+
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0 6px 20px rgba(0,0,0,0.35);
+}
+
+
+/* NAVBAR ON IMAGE */
+.hero-nav {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  padding: 16px 80px;
+
+  display: flex;
+  justify-content: center;   /* 👈 CENTER EVERYTHING */
+  align-items: center;
+  gap: 60px;                 /* space between logo & links */
+
+  z-index: 3;
+}
+
+.hero-nav {
+  position: absolute;
+  top: -30px;
+  left: 0;
+  width: 100%;
+  padding: 16px 80px;
+
+  display: flex;
+  align-items: center;
+
+  z-index: 3;
+}
+
+
+
+/* LOGO */
+.logo {
+  font-size: 22px;           /* 👈 bigger */
+  font-weight: 600;
+  color: #000; 
+                /* 👈 black */
+}
+
+/* Desktop only */
+@media (min-width: 1024px) {
+  .logo {
+    margin-left: -40px;   /* 👈 move logo left */
+  }
+}
+
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  align-items: center;       /* 👈 center vertically */
+}
+
+.logo,
+.nav-links li {
+  line-height: 1;          /* 👈 KEY FIX */
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  cursor: pointer;
+  font-size: 16px;           /* 👈 bigger text */
+  font-weight: 500;
+  color: #000;               /* 👈 black */
+}
+
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+
+  transform: translate(-80px, -150px); /* 👈 LEFT & UP */
+}
+
+.hero-content h1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 350;
+  font-size: 70px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+}
+
+.hero-content h1 {
+  max-width: 900px;        /* 👈 give it enough width */
+  white-space: nowrap;    /* 👈 prevents extra wrapping */
+}
+
+
+.hero-content p {
+  font-size: 16px;       /* 👈 bigger text */
+  line-height: 1.6;      /* 👈 comfortable reading */
+  max-width: 640px;
+  margin-bottom: 32px;
+  font-weight: 400;
+}
+
+.hero-btn {
+  background: #111;
+  color: #fff;
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+
+}
+
+.nav-links {
+  margin: 0 auto;           /* 👈 keeps navlinks centered */
+  display: flex;
+  gap: 36px;
+  list-style: none;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1;
+}
+
+/* Desktop only logo movement */
+@media (min-width: 1024px) {
+  .logo {
+    margin-left: -40px;     /* 👈 moves ONLY logo */
+  }
+}
+
+/* Desktop only: move nav links slightly toward center */
+@media (min-width: 1024px) {
+  .nav-links {
+    transform: translateX(-80px);  /* 👈 move links left */
+  }
+}
+
+.hero-btn {
+  margin-top: -12px;   /* 👈 moves button up */
+}
+
+
+
+@media (max-width: 768px) {
+  .hero-content {
+    transform: translateY(40px); /* 👈 move content DOWN */
+    padding: 0 16px;
+  }
+
+  .hero-content h1 {
+    font-size: 45px;      /* 👈 smaller heading */
+    line-height: 1.15;
+    white-space: normal; /* allow proper wrapping */
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 16px;      /* 👈 smaller paragraph */
+    line-height: 1.5;
+    margin-top: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .hero-btn {
+    transform: translateY(20px); /* reset if needed */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 38px;        /* mobile size */
+    line-height: 1.15;
+    max-width: 320px;       /* 👈 forces 2 lines */
+    margin: 0 auto;
+    text-align: center;
+    white-space: normal;   /* allow wrap ONLY at <br /> */
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title { max-width: 320px; }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 38px;
+    line-height: 1.15;
+    max-width: 320px;   /* 👈 key line */
+    margin: 0 auto;
+    text-align: center;
+    white-space: normal;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    white-space: normal;   /* 👈 override desktop */
+    max-width: 320px;      /* 👈 forces 2 lines */
+    font-size: 38px;
+    line-height: 1.15;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    max-width: 300px;  /* 👈 still 2 lines */
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+
+  /* Move whole content up */
+  .hero-content {
+    transform: translateY(-40px);
+    padding: 0 16px;
+  }
+
+  /* Heading spacing + size */
+  .hero-content h1 {
+    
+    margin-bottom: 20px;   /* gap below h1 */
+       /* allow wrapping */
+  }
+
+  /* Paragraph spacing */
+  .hero-content p {
+   
+    margin-bottom: 20px;   /* gap before button */
+       /* keeps it neat */
+  }
+
+  /* Button spacing */
+  .hero-btn {
+    margin-top: 0;         /* clean spacing */
+  }
+}
+
+
+@media (max-width: 768px) {
+  /* LOGO smaller */
+  .logo {
+    font-size: 19px;
+    font-weight: 500;
+  }
+
+  /* NAV LINKS smaller */
+  .nav-links li {
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  /* Reduce spacing between links */
+  .nav-links {
+    gap: 18px;
+  }
+
+  /* Slightly reduce navbar padding */
+  .hero-nav {
+    padding: 12px 20px;
+  }
+}

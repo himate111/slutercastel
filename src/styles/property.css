@@ -1,0 +1,325 @@
+.property {
+  padding: 100px 120px;
+  background: #ffffff;
+}
+
+/* HEADER */
+.property-header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 40px;
+}
+
+.property-header h2 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.property-header p {
+  font-size: 14px;
+  color: #888;
+}
+
+
+
+
+
+
+/* GRID */
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* CARD */
+.property-card {
+  background: #fff;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.property-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* CARD BODY */
+.card-body {
+  padding: 20px;
+}
+
+.badge {
+  background: #eef2ff;
+  color: #4f6cf7;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12px;
+  margin-right: 8px;
+}
+
+.rating {
+  float: right;
+  font-size: 12px;
+  color: #f5a623;
+}
+
+.card-body h3 {
+  margin: 12px 0 6px;
+  font-size: 18px;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.location {
+  font-size: 13px;
+  color: #888;
+  margin: 6px 0 14px;
+}
+
+.features {
+  display: flex;
+  gap: 16px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* LOAD MORE */
+.load-more {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.load-more button {
+  background: #4f6cf7;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+/* TABS CONTAINER */
+.property-tabs {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background: #bfe2ff;
+  padding: 8px;
+  border-radius: 50px;
+  width: fit-content;
+  margin: 30px auto 50px;
+}
+
+
+/* TAB ITEMS */
+.property-tabs span {
+  position: relative;
+  z-index: 2;
+  padding: 10px 22px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 40px;
+  color: #1a1a1a;
+}
+/* HOVER */
+.property-tabs span:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+/* ACTIVE TAB */
+.property-tabs span.active {
+  background: #2f6db5;   /* dark blue like Home button */
+  color: #ffffff;
+}
+
+.slider {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: calc(100% - 16px);
+  width: 140px;
+  background: #2f6db5;
+  border-radius: 40px;
+  transition: transform 0.35s ease-in-out;
+  z-index: 1;
+}
+
+/* SLIDER POSITIONS */
+.slider.all {
+  transform: translateX(0);
+}
+
+.slider.ongoing {
+  transform: translateX(150px);
+}
+
+.slider.completed {
+  transform: translateX(330px);
+}
+
+/* ACTIVE TEXT COLOR */
+.property-tabs span.active {
+  color: #ffffff;
+}
+
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+
+  .property {
+    padding: 60px 20px;
+  }
+
+  .property-header h2 {
+    font-size: 28px;
+  }
+
+  .property-tabs {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .property-tabs span {
+    font-size: 13px;
+    padding: 12px 6px;
+  }
+
+  
+
+  .slider.all { transform: translateX(0%); }
+  .slider.ongoing { transform: translateX(100%); }
+  .slider.completed { transform: translateX(200%); }
+}
+
+
+@media (max-width: 576px) {
+
+  /* Reduce overall tab height */
+  .property-tabs {
+    padding: 6px;
+  }
+
+  /* Reduce text padding slightly */
+
+
+  /* 🔑 Reduce slider size */
+  .slider {
+    top: 6px;
+    left: 6px;
+    height: calc(100% - 12px);   /* was 16px */
+    border-radius: 30px;
+  }
+}
+
+
+
+
+
+@media (max-width: 576px) {
+
+  /* Make the whole pill wider */
+  .property-tabs {
+    width: 100%;
+    max-width: 420px;   /* 👈 increase container width */
+    padding: 8px;
+  }
+
+  /* Keep text in ONE LINE */
+  .property-tabs span {
+    white-space: nowrap;   /* 👈 no wrapping */
+    font-size: 13px;
+    padding: 8px 12px;
+    text-align: center;
+  }
+
+  /* Remove big slider (mobile text-hug style) */
+  .slider {
+    display: none;
+  }
+
+  /* Active tab wraps text only */
+  .property-tabs span.active {
+    background: #2f6db5;
+    color: #ffffff;
+    border-radius: 999px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Property section padding */
+  .property {
+    padding: 50px 16px;
+  }
+
+  /* Grid becomes single column */
+  .property-grid {
+    grid-template-columns: 1fr;   /* 👈 one by one */
+    gap: 24px;
+    justify-items: center;        /* center cards */
+  }
+
+  /* Card width control */
+  .property-card {
+    width: 100%;
+    max-width: 400px;             /* 👈 neat card width */
+    border-radius: 20px;
+  }
+
+  /* Image height slightly reduced */
+  .property-card img {
+    height: 170px;
+  }
+
+  /* Center load more button */
+  .load-more {
+    margin-top: 32px;
+  }
+
+  .load-more button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+   .card-body {
+    padding: 16px;      /* was 20px */
+  }
+
+  .card-body h3 {
+    font-size: 17px;
+    margin: 8px 0 4px;
+  }
+
+  .location {
+    margin-bottom: 10px;
+  }
+
+  .features {
+    gap: 12px;
+  }
+}
+
+
+
+
+
+
+

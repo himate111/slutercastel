@@ -1,0 +1,171 @@
+/* ===============================
+   RESET + BASE
+================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: #eef3f4;
+  overflow-x: hidden; /* safety net */
+}
+
+/* ===============================
+   ROOT APP WRAPPER
+================================ */
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* ===============================
+   TYPOGRAPHY
+================================ */
+
+h1 {
+  font-size: 3.2rem;
+  line-height: 1.1;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+/* ===============================
+   BUTTONS
+================================ */
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.25s ease, background-color 0.25s ease;
+}
+
+button:hover {
+  border-color: #646cff;
+}
+
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* ===============================
+   HERO SECTION (FIXED)
+================================ */
+
+.hero {
+  width: 100%;              /* NOT 100vw */
+  min-height: 100vh;
+  background: #eef3f4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 6rem;
+  gap: 2rem;
+}
+
+/* ===============================
+   HERO COLUMNS
+================================ */
+
+.hero-left,
+.hero-right {
+  flex: 1;
+}
+
+/* ===============================
+   CENTER ARCH / IMAGE
+================================ */
+
+.hero-center {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-center img {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ===============================
+   NAVBAR (OPTIONAL)
+================================ */
+
+.navbar {
+  width: 100%;
+  padding: 1.5rem 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ===============================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+  .hero {
+    flex-direction: column;
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right,
+  .hero-center {
+    width: 100%;
+  }
+}
+
+/* ===============================
+   LIGHT MODE SUPPORT
+================================ */
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #213547;
+  }
+
+  button {
+    background-color: #f9f9f9;
+    color: #000;
+  }
+}
+
+
+@font-face {
+  font-family: "Grobold";
+  src: url("./assets/fonts/GROBOLD.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
