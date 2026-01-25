@@ -285,13 +285,13 @@
 @media (max-width: 768px) {
   /* LOGO smaller */
   .logo {
-    font-size: 19px;
+    font-size: 17px;
     font-weight: 500;
   }
 
   /* NAV LINKS smaller */
   .nav-links li {
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
   }
 
@@ -303,5 +303,26 @@
   /* Slightly reduce navbar padding */
   .hero-nav {
     padding: 12px 20px;
+  }
+}
+
+
+
+
+@media (max-width: 568px) {
+  .hero-content h1 {
+    font-size: 36px;
+    line-height: 1.18;
+    max-width: 280px;   /* 🎯 forces EXACTLY 2 lines */
+  }
+
+  .hero-content p {
+    font-size: 14px;
+    max-width: 260px;
+  }
+
+  .hero-btn {
+    padding: 12px 22px;
+    font-size: 13px;
   }
 }
