@@ -21,17 +21,17 @@ export default function Contact() {
 
             <div>
               <label>Email</label>
-              <input type="email" placeholder="mitcheltrack@gmail.com" />
+              <input type="email"  />
             </div>
 
             <div>
               <label>Phone Number</label>
-              <input type="text" placeholder="(555) 234-5678" />
+              <input type="text"  />
             </div>
 
             <div>
               <label>Address</label>
-              <input type="text" placeholder="123 Main Street, Suite 100" />
+              <input type="text"  />
             </div>
           </div>
 

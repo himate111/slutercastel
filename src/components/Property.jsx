@@ -1,8 +1,10 @@
 import "../styles/property.css";
+import nest from "../assets/images/nest.jpeg";
+import feather from "../assets/images/fether.jpeg";
+
 import { useState } from "react";
 import { 
-  BedDouble, 
-  Bath, 
+   Building2,
   MapPin, 
   Ruler 
 } from "lucide-react";
@@ -13,34 +15,44 @@ const properties = [
   {
     status: "ongoing",
     type: "House",
-    title: "Grand Galaxy",
+    title: "TULIP",
     price: "$900,000",
-    location: "Grand Galaxy Park Jl. Boulevard Raya",
+    location: "Semanchery, Chennai",
     img: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
-  },
-  {
-    status: "completed",
-    type: "Building",
-    title: "Gulon Asri House",
-    price: "$500,000",
-    location: "326 Kenangan Avenue Blv, Kalimalang",
-    img: "https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg",
-  },
-  {
-    status: "ongoing",
-    type: "Residence",
-    title: "D’green SOC",
-    price: "$650,000",
-    location: "326 Kenangan Avenue Blv, Bekasi Blv",
-    img: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+     floors: 2,
+    totalSqft: "9,500 sqft",
   },
   {
     status: "completed",
     type: "Apartment",
-    title: "Oslo Urbana",
+    title: "NEST",
+    price: "$500,000",
+    location: "Mel Ayanambakkam, Chennai",
+    img: nest,
+    floors : 2,
+    totalSqft: "4,000 sqft",
+  },
+  {
+    status: "ongoing",
+    type: "Residence",
+    title: "BLOSSOM",
+    price: "$650,000",
+    location: "Semanchery, Chennai",
+    img: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+     floors : 2,
+    totalSqft: "4,000 sqft",
+  },
+   
+
+  {
+    status: "completed",
+    type: "Apartment",
+    title: "FEATHER",
     price: "$1,200,000",
-    location: "326 Kenangan Avenue Blv, Bekasi Blv",
-    img: "https://images.pexels.com/photos/4393914/pexels-photo-4393914.jpeg",
+    location: "Thoraipakkam, Chennai",
+    img: feather,
+     floors : 3,
+    totalSqft: "4,000 sqft",
   },
 ];
 
@@ -114,11 +126,15 @@ const filteredProperties =
 </p>
 
 
- <div className="features">
-  <span><BedDouble size={16} /> 3 Beds</span>
-  <span><Bath size={16} /> 3 Baths</span>
-  <span><Ruler size={16} /> 2,800 sqft</span>
+<div className="features">
+  <span>
+    <Ruler size={16} /> {item.totalSqft}
+  </span>
+  <span>
+    <Building2 size={16} /> {item.floors} Floors
+  </span>
 </div>
+
 
 
 

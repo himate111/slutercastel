@@ -503,7 +503,7 @@
 
    /* MOVE MENU ICON UP */
   .menu-icon {
-    margin-top: -140px; 
+    margin-top: -180px; 
     color: #000;
     font-size: 40px;      /* increase size */
   font-weight: 600;       /* 👈 push icon up */
@@ -511,7 +511,7 @@
 
   /* MOVE LOGO UP */
   .logo {
-    top: -160px;
+    top: -190px;
     margin-right:20px;   /* 👈 move logo upward */
   }
   
@@ -537,7 +537,7 @@
   .nav-cta {
     position: absolute;
     right: 16px;
-    top: -120px;
+    top: -160px;
     padding: 8px 14px;
     font-size: 13px;
   }
