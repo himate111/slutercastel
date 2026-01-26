@@ -1,29 +1,33 @@
 import "../styles/about.css";
+import residentialImg from "../assets/images/residental.jpg";
+import jointVentureImg from "../assets/images/partner.jpg";
+import salesMarketingImg from "../assets/images/meeting.jpg";
+import projectManagementImg from "../assets/images/planning.jpg";
 
 const services = [
   {
     id: "01",
-    title: "Arch Design",
-    desc: "From initial concept development and schematic design",
-    img: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
+    title: "Residential Construction",
+    desc: "High-quality residential construction with smart design, ventilation, and natural lighting.",
+    img: residentialImg,
   },
   {
     id: "02",
-    title: "Interior Design",
-    desc: "Creating cohesive interior spaces that reflect your style",
-    img: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    title: "Joint Venture Development",
+    desc: "Partnering with landowners to develop and deliver profitable residential projects.",
+    img: jointVentureImg,
   },
   {
     id: "03",
-    title: "Urban Planning",
-    desc: "Designing the spaces between buildings & outdoors",
-    img: "https://images.pexels.com/photos/4393914/pexels-photo-4393914.jpeg",
+    title: "Real Estate Sales & Marketing",
+    desc: "Strategic marketing and sales for residential projects from launch to closure.",
+    img: salesMarketingImg,
   },
   {
     id: "04",
-    title: "Project Manage",
-    desc: "Overseeing & controlling the entire construction process",
-    img: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg",
+    title: "Project Planning & Management",
+    desc: "Complete project planning ensuring quality, timelines, cost control, and satisfaction.",
+    img: projectManagementImg,
   },
 ];
 
@@ -76,10 +80,10 @@ export default function About() {
       <div className="services-header">
         <h3>Services we provide</h3>
 
-        <div className="arrows">
+        {/* <div className="arrows">
           <button>←</button>
           <button>→</button>
-        </div>
+        </div> */}
       </div>
 
       {/* SERVICES */}

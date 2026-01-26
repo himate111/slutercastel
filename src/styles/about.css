@@ -72,16 +72,18 @@
   height: 36px;
   border-radius: 50%;
   border: 1px solid #ddd;
-  background: white;
+  background: black;
   cursor: pointer;
   margin-left: 10px;
+  color: white;
+  font-size: 14px;
 }
 
 /* SERVICES GRID */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 23px;
+  gap: 30px;
  
 }
 
