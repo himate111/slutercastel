@@ -16,7 +16,7 @@ export default function Contact() {
           <div className="form-grid">
             <div>
               <label>Full Name</label>
-              <input type="text" placeholder="Mitchel Strack" />
+              <input type="text" placeholder="Enter your name" />
             </div>
 
             <div>

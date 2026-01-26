@@ -1,5 +1,13 @@
 import "../styles/property.css";
 import { useState } from "react";
+import { 
+  BedDouble, 
+  Bath, 
+  MapPin, 
+  Ruler 
+} from "lucide-react";
+
+
 
 const properties = [
   {
@@ -91,30 +99,33 @@ const filteredProperties =
       {/* GRID */}
       <div className="property-grid">
         {filteredProperties.map((item, index) => (
-          <div className="property-card" key={index}>
-            <img src={item.img} alt={item.title} />
 
-            <div className="card-body">
-              <span className="badge">{item.type}</span>
-              <span className="rating">
-                ★★★★★ <small>4.8</small>
-              </span>
+         <div className="property-card" key={index}>
+  <img src={item.img} alt={item.title} />
 
-              <h3>{item.title}</h3>
+  <div className="card-body">
+    <div className="price">{item.price}</div>
 
-              <div className="price-row">
-                <span className="price">{item.price}</span>
-              </div>
+    <h3 className="title">{item.title}</h3>
 
-              <p className="location">{item.location}</p>
+    <p className="location">
+  <MapPin size={14} />
+  {item.location}
+</p>
 
-              <div className="features">
-                <span>🛏 3 Beds</span>
-                <span>🛁 3 Baths</span>
-                <span>📐 2+</span>
-              </div>
-            </div>
-          </div>
+
+ <div className="features">
+  <span><BedDouble size={16} /> 3 Beds</span>
+  <span><Bath size={16} /> 3 Baths</span>
+  <span><Ruler size={16} /> 2,800 sqft</span>
+</div>
+
+
+
+  </div>
+</div>
+
+
         ))}
       </div>
 

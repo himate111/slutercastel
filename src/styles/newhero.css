@@ -11,6 +11,20 @@
 }
 
 
+.logo img {
+  height: 110px;        /* adjust as needed */
+  width: auto;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 90px;
+    margin-top: 25px;
+  }
+}
+
 
 .hero::before {
   content: "";

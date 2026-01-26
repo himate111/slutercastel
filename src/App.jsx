@@ -8,6 +8,7 @@ import TrustSection from "./components/Trusted.jsx";
 import Contact from "./components/Contact.jsx";
 import Property from "./components/Property.jsx";
 import Newhero from "./components/Newhero.jsx";
+import About from "./components/AboutUs.jsx";
 
 import { properties } from "./data/properties";
 
@@ -20,7 +21,7 @@ function App() {
       <Hero onSearch={setFilteredProperties} /> */}
       <Newhero />
       
-      <TrustSection />
+      <About />
       <Property />
       <Contact />
     </>

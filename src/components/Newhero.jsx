@@ -1,4 +1,5 @@
 import heroImg from "../assets/images/frontpageimage.png";
+import logoImg from "../assets/images/logo.png";
 import "../styles/newhero.css";
 
 export default function Hero() {
@@ -19,7 +20,11 @@ export default function Hero() {
 
       {/* NAVBAR OVER IMAGE */}
      <nav className="hero-nav">
-  <div className="logo">Homesco</div>
+ 
+ <div className="logo">
+  <img src={logoImg} alt="Homesco Logo" />
+</div>
+
 
   <ul className="nav-links">
     <li onClick={() => scrollToSection("home")}>Home</li>
