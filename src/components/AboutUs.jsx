@@ -33,7 +33,7 @@ const services = [
 
 export default function About() {
   return (
-    <section className="about">
+    <section className="about" id="aboutus">
 
       {/* TOP ROW */}
       <div className="about-top">
