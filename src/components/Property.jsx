@@ -1,6 +1,13 @@
 import "../styles/property.css";
-import nest from "../assets/images/nest.jpeg";
-import feather from "../assets/images/fether.jpeg";
+import nest from "../assets/images/nnest.jpg";
+import feather from "../assets/images/please.png";
+import ongoing from "../assets/images/ongoing.jpg";
+import ongoing1 from "../assets/images/ongoing1.jpg";
+import ongoing2 from "../assets/images/ongoing2.jpg";
+import ongoing3 from "../assets/images/ongoing3.jpg";
+import florence from "../assets/images/florence.jpeg";
+import venture from "../assets/images/venture1.jpg";
+import blossom from "../assets/images/blossom.jpeg";
 
 import { useState } from "react";
 import { 
@@ -16,43 +23,64 @@ const properties = [
     status: "ongoing",
     type: "House",
     title: "TULIP",
-    price: "$900,000",
-    location: "Semanchery, Chennai",
-    img: "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
+   
+    location: "Sholinganallur, Chennai",
+    img: ongoing,
      floors: 2,
-    totalSqft: "9,500 sqft",
+    
   },
   {
     status: "completed",
     type: "Apartment",
     title: "NEST",
-    price: "$500,000",
+   
     location: "Mel Ayanambakkam, Chennai",
     img: nest,
     floors : 2,
-    totalSqft: "4,000 sqft",
+    
   },
   {
     status: "ongoing",
     type: "Residence",
     title: "BLOSSOM",
-    price: "$650,000",
-    location: "Semanchery, Chennai",
-    img: "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
-     floors : 2,
-    totalSqft: "4,000 sqft",
-  },
    
+    location: "Navalur, Chennai",
+    img: blossom,
+     floors : 2,
+   
+  },
+   {
+    status: "ongoing",
+    type: "Residence",
+    title: "FLORENCE",
+
+    location: "Thoraipakkam, Chennai",
+    img: florence,
+     floors : 2,
+    
+  },
+  
+  {
+    status: "ongoing",
+    type: "Residence",
+    title: "VENTURE ONE",
+    
+    location: "Mel Ayyanam bakkam, Chennai",
+    img: venture,
+     floors : 2,
+    
+  },
+
 
   {
     status: "completed",
     type: "Apartment",
     title: "FEATHER",
-    price: "$1,200,000",
+  
     location: "Thoraipakkam, Chennai",
     img: feather,
      floors : 3,
-    totalSqft: "4,000 sqft",
+    
   },
 ];
 
@@ -127,9 +155,7 @@ const filteredProperties =
 
 
 <div className="features">
-  <span>
-    <Ruler size={16} /> {item.totalSqft}
-  </span>
+ 
   <span>
     <Building2 size={16} /> {item.floors} Floors
   </span>

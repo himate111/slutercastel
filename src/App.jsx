@@ -20,9 +20,8 @@ function App() {
       {/* <Navbar />
       <Hero onSearch={setFilteredProperties} /> */}
       <Newhero />
-      
-      <About />
       <Property />
+      <About />
       <Contact />
     </>
   );
