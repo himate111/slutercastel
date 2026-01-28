@@ -56,11 +56,11 @@ export default function About() {
 
         <div className="about-stats">
           <div>
-            <h2>25+</h2>
+            <h2>7+</h2>
             <p>Years of Excellence in Architecture & Design</p>
           </div>
           <div>
-            <h2>500+</h2>
+            <h2>50+</h2>
             <p>Projects Successfully Completed</p>
           </div>
           <div>
@@ -68,7 +68,7 @@ export default function About() {
             <p>Our Client Retention Rate</p>
           </div>
           <div>
-            <h2>15+</h2>
+            <h2>5+</h2>
             <p>Countries with Our Projects</p>
           </div>
         </div>

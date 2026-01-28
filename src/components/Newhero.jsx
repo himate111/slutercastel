@@ -26,41 +26,41 @@ export default function Hero() {
        <nav className="hero-nav">
 
   {/* MOBILE MENU ICON */}
-  <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+  {/* <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
     ☰
-  </div>
+  </div> */}
 
   {/* LOGO (centered on mobile) */}
-  <div className="logo">
+  {/* <div className="logo">
     <img src={logoImg} alt="Homesco Logo" />
-  </div>
+  </div> */}
 
   {/* DESKTOP LINKS */}
-  <ul className="nav-links">
+  {/* <ul className="nav-links">
     <li onClick={() => scrollToSection("home")}>Home</li>
     <li onClick={() => scrollToSection("aboutus")}>About Us</li>
     <li onClick={() => scrollToSection("properties")}>Properties</li>
     <li onClick={() => scrollToSection("contact")}>Contact</li>
-  </ul>
+  </ul> */}
 
-   <button
+   {/* <button
     className="nav-cta"
     onClick={() => scrollToSection("contact")}
   >
     Let’s Talk
-  </button>
+  </button> */}
   
 </nav>
 
 
- {menuOpen && (
+ {/* {menuOpen && (
   <div className="mobile-menu">
     <li onClick={() => scrollToSection("home")}>Home</li>
     <li onClick={() => scrollToSection("aboutus")}>About Us</li>
     <li onClick={() => scrollToSection("properties")}>Properties</li>
     <li onClick={() => scrollToSection("contact")}>Contact</li>
   </div>
-)}
+)} */}
 
 
 

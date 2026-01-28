@@ -2,9 +2,7 @@ import "../styles/property.css";
 import nest from "../assets/images/nnest.jpg";
 import feather from "../assets/images/please.png";
 import ongoing from "../assets/images/ongoing.jpg";
-import ongoing1 from "../assets/images/ongoing1.jpg";
-import ongoing2 from "../assets/images/ongoing2.jpg";
-import ongoing3 from "../assets/images/ongoing3.jpg";
+
 import florence from "../assets/images/florence.jpeg";
 import venture from "../assets/images/venture1.jpg";
 import blossom from "../assets/images/blossom.jpeg";

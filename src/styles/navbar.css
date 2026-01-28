@@ -134,12 +134,82 @@
   .nav-actions {
     margin-left: auto;
     gap: 8px;
+    
   }
 
   .signup {
     padding: 6px 10px;
     font-size: 12px;
   }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 55;
+  }
 }
+
+
+.logo img {
+  height: 30px;      /* adjust as needed */
+  width: auto;
+  cursor: pointer;
+  max-height: 140%;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar-logo img {
+  height: 90px;
+  width: auto;
+}
+
+
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    height: 70px;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  .navbar-logo img {
+    height: 80px;
+    width: auto;
+  }
+}
+
+
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 36px;
+  position: absolute;     /* 👈 KEY */
+  left: 45%;              /* 👈 KEY */
+  transform: translateX(-50%); /* 👈 KEY */
+}
+
+
+.nav-actions button {
+  border-radius: 24px;   /* increase this */
+}
+
+
+
 
 

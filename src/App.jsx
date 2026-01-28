@@ -17,12 +17,13 @@ function App() {
 
   return (
     <>
-      {/* <Navbar />
-      <Hero onSearch={setFilteredProperties} /> */}
+      <Navbar />
+      
       <Newhero />
       <Property />
       <About />
       <Contact />
+      {/* <Hero onSearch={setFilteredProperties} /> */}
     </>
   );
 }
