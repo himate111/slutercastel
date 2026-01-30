@@ -27,28 +27,37 @@ export default function Contact() {
     });
   };
 
-const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e) => {
   e.preventDefault();
   setLoading(true);
   setStatus({ type: "", message: "" });
 
   try {
-    const res = await fetch("https://shultercastlebackend-production.up.railway.app/send-message", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        message: `
+    const res = await fetch(
+      "https://shultercastlebackend-production.up.railway.app/send-message",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: `
 Phone: ${formData.phone}
 Address: ${formData.address}
 
 ${formData.message}
-        `,
-      }),
-    });
+          `,
+        }),
+      }
+    );
+
+    // 🔴 IMPORTANT: handle non-200 safely
+    if (!res.ok) {
+      throw new Error("Request failed");
+    }
 
     const data = await res.json();
 
@@ -72,9 +81,12 @@ ${formData.message}
       });
     }
   } catch (error) {
+    console.error(error);
+
     setStatus({
       type: "error",
-      message: "Server error. Please try later.",
+      message:
+        "Unable to send message right now. Please try again later.",
     });
   } finally {
     setLoading(false);
@@ -82,8 +94,15 @@ ${formData.message}
 };
 
 
+
   return (
     <section id="contact" className="contact">
+      
+      {status.type === "error" && (
+  <p className="error-text">
+    {status.message}
+  </p>
+)}
 
 
       {status.type === "success" && (
