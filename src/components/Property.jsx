@@ -1,7 +1,7 @@
 import "../styles/property.css";
 import nest from "../assets/images/nnest.jpg";
 import feather from "../assets/images/please.png";
-import ongoing from "../assets/images/ongoing.jpg";
+import ongoing from "../assets/images/venture1.jpg";
 
 import florence from "../assets/images/florence.jpeg";
 import venture from "../assets/images/ventura.jpg";
@@ -23,7 +23,7 @@ const properties = [
     title: "TULIP",
    
     location: "Sholinganallur, Chennai",
-    img: ongoing,
+    img: venture,
      floors: 2,
     
   },
@@ -64,7 +64,7 @@ const properties = [
     title: "VENTURA ONE",
     
     location: "Mel Ayyanam bakkam, Chennai",
-    img: venture,
+    img: ongoing,
      floors : 2,
     
   },
