@@ -33,7 +33,7 @@ const handleSubmit = async (e) => {
   setStatus({ type: "", message: "" });
 
   try {
-    const res = await fetch("http://localhost:5000/send-message", {
+    const res = await fetch("https://shultercastlebackend-production.up.railway.app/send-message", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

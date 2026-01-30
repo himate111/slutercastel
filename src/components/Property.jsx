@@ -4,7 +4,7 @@ import feather from "../assets/images/please.png";
 import ongoing from "../assets/images/ongoing.jpg";
 
 import florence from "../assets/images/florence.jpeg";
-import venture from "../assets/images/venture1.jpg";
+import venture from "../assets/images/ventura.jpg";
 import blossom from "../assets/images/blossom.jpeg";
 
 import { useState } from "react";
@@ -61,7 +61,7 @@ const properties = [
   {
     status: "ongoing",
     type: "Residence",
-    title: "VENTURE ONE",
+    title: "VENTURA ONE",
     
     location: "Mel Ayyanam bakkam, Chennai",
     img: venture,
