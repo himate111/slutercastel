@@ -41,16 +41,16 @@ export default function Contact() {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: `
-Phone: ${formData.phone}
-Address: ${formData.address}
 
-${formData.message}
-          `,
-        }),
+       body: JSON.stringify({
+  name: formData.name,
+  email: formData.email,
+  phone: formData.phone,
+  address: formData.address,
+  message: formData.message,
+}),
+
+
       }
     );
 
