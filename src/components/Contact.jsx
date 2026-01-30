@@ -35,7 +35,7 @@ export default function Contact() {
 
   try {
     const res = await fetch(
-      "https://shultercastlebackend-production.up.railway.app/send-message",
+      "https://sheltercastle-production.up.railway.app/send-message",
       {
         method: "POST",
         headers: {
