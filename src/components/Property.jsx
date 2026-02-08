@@ -8,89 +8,77 @@ import venture from "../assets/images/ventura.jpg";
 import blossom from "../assets/images/blossom.jpeg";
 
 import { useState } from "react";
-import { 
-   Building2,
-  MapPin, 
-  Ruler 
+import { useNavigate } from "react-router-dom";
+import {
+  Building2,
+  MapPin,
 } from "lucide-react";
-
-
 
 const properties = [
   {
+    id: "tulip",
     status: "ongoing",
     type: "House",
     title: "TULIP",
-   
     location: "Sholinganallur, Chennai",
     img: venture,
-     floors: 2,
-    
+    floors: 3,
   },
   {
+    id: "nest",
     status: "completed",
     type: "Apartment",
     title: "NEST",
-   
     location: "Mel Ayanambakkam, Chennai",
     img: nest,
-    floors : 2,
-    
+    floors: 3,
   },
   {
+    id: "blossom",
     status: "ongoing",
     type: "Residence",
     title: "BLOSSOM",
-   
     location: "Navalur, Chennai",
     img: blossom,
-     floors : 2,
-   
+    floors: 3,
   },
-   {
+  {
+    id: "florence",
     status: "ongoing",
     type: "Residence",
     title: "FLORENCE",
-
     location: "Thoraipakkam, Chennai",
     img: florence,
-     floors : 2,
-    
+    floors: 3,
   },
-  
   {
+    id: "ventura",
     status: "ongoing",
     type: "Residence",
     title: "VENTURA ONE",
-    
     location: "Mel Ayyanam bakkam, Chennai",
     img: ongoing,
-     floors : 2,
-    
+    floors: 3,
   },
-
-
   {
+    id: "feather",
     status: "completed",
     type: "Apartment",
     title: "FEATHER",
-  
     location: "Thoraipakkam, Chennai",
     img: feather,
-     floors : 3,
-    
+    floors: 3,
   },
 ];
 
-
 export default function Property() {
   const [activeTab, setActiveTab] = useState("all");
+  const navigate = useNavigate();
 
-
-const filteredProperties =
-  activeTab === "all"
-    ? properties
-    : properties.filter((item) => item.status === activeTab);
+  const filteredProperties =
+    activeTab === "all"
+      ? properties
+      : properties.filter((item) => item.status === activeTab);
 
   return (
     <section id="properties" className="property">
@@ -105,67 +93,62 @@ const filteredProperties =
       </div>
 
       {/* TABS */}
-        {/* TABS */}
-<div className="property-tabs">
-  <div className={`slider ${activeTab}`}></div>
+      <div className="property-tabs">
+        <div className={`slider ${activeTab}`}></div>
 
-  <span
-    className={activeTab === "all" ? "active" : ""}
-    onClick={() => setActiveTab("all")}
-  >
-    All Projects
-  </span>
+        <span
+          className={activeTab === "all" ? "active" : ""}
+          onClick={() => setActiveTab("all")}
+        >
+          All Projects
+        </span>
 
-  <span
-    className={activeTab === "ongoing" ? "active" : ""}
-    onClick={() => setActiveTab("ongoing")}
-  >
-    Ongoing Projects
-  </span>
+        <span
+          className={activeTab === "ongoing" ? "active" : ""}
+          onClick={() => setActiveTab("ongoing")}
+        >
+          Ongoing Projects
+        </span>
 
-  <span
-    className={activeTab === "completed" ? "active" : ""}
-    onClick={() => setActiveTab("completed")}
-  >
-    Completed Projects
-  </span>
-</div>
-
-
-
+        <span
+          className={activeTab === "completed" ? "active" : ""}
+          onClick={() => setActiveTab("completed")}
+        >
+          Completed Projects
+        </span>
+      </div>
 
       {/* GRID */}
       <div className="property-grid">
-        {filteredProperties.map((item, index) => (
+        {filteredProperties.map((item) => (
+          <div className="property-card" key={item.id}>
+            <img src={item.img} alt={item.title} />
 
-         <div className="property-card" key={index}>
-  <img src={item.img} alt={item.title} />
+            <div className="card-body">
+              <h3 className="title">{item.title}</h3>
 
-  <div className="card-body">
-    <div className="price">{item.price}</div>
+              <p className="location">
+                <MapPin size={14} />
+                {item.location}
+              </p>
 
-    <h3 className="title">{item.title}</h3>
+              <div className="card-footer">
+                <div className="features">
+                  <span>
+                    <Building2 size={16} /> {item.floors} Floors
+                  </span>
+                </div>
 
-    <p className="location">
-  <MapPin size={14} />
-  {item.location}
-</p>
-
-
-<div className="features">
- 
-  <span>
-    <Building2 size={16} /> {item.floors} Floors
-  </span>
-</div>
-
-
-
-
-  </div>
-</div>
-
-
+                <button
+                  className="read-more-btn"
+                  onClick={() => navigate(`/project/${item.id}`)}
+                >
+                  <span>Learn More</span>
+                  <span className="arrow">›</span>
+                </button>
+              </div>
+            </div>
+          </div>
         ))}
       </div>
 

@@ -72,8 +72,10 @@ export default function Hero() {
 </h1>
 
 
+
+
         <p>
-          Find homes that suit your vibe, your budget, and your future.
+          Find homes that suit your vibe, your budget, and your future.<br />
           Whether you're buying, renting, or just exploring.
         </p>
 

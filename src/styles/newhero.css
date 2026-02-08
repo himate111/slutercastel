@@ -674,3 +674,27 @@
 
 /* ================= DESKTOP NAVBAR ================= */
 
+.hero-content h1,
+.hero-title {
+  color: #000000;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero-content p {
+  color: #353535;
+}
+
+/* Desktop only positioning */
+@media (min-width: 1024px) {
+  .hero-content {
+    transform: translate(10px, -40px); /* move slightly up only on desktop */
+  }
+}
+
+/* Desktop only: move heading slightly up */
+@media (min-width: 1024px) {
+  .hero-title {
+    margin-top: -60px;
+    margin-bottom: 20px;
+  }
+}
