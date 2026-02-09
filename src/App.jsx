@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop.jsx";
 
 import Navbar from "./components/Navbar.jsx";
 import Newhero from "./components/Newhero.jsx";
@@ -20,23 +21,25 @@ function Home() {
 
 function App() {
   return (
-    <Routes>
-      {/* Home page with navbar */}
-      <Route
-        path="/"
-        element={
-          <>
-            <Navbar />
-            <Home />
-          </>
-        }
-      />
+    <>
+      <ScrollToTop />
+      <Routes>
+        {/* Home page with navbar */}
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Home />
+            </>
+          }
+        />
 
-      {/* Technologies page without navbar */}
-      <Route path="/project/:id" element={<Technologies />} />
-    </Routes>
+        {/* Technologies page without navbar */}
+        <Route path="/project/:id" element={<Technologies />} />
+      </Routes>
+    </>
   );
 }
-
 
 export default App;

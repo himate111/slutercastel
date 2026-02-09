@@ -28,72 +28,105 @@ export default function Contact() {
   };
 
 
-  const handleSubmit = async (e) => {
+//   const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setLoading(true);
+//   setStatus({ type: "", message: "" });
+
+//   try {
+//     const res = await fetch(
+//       "https://sheltercastle-production.up.railway.app/send-message",
+//       {
+//         method: "POST",
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+
+//        body: JSON.stringify({
+//   name: formData.name,
+//   email: formData.email,
+//   phone: formData.phone,
+//   address: formData.address,
+//   message: formData.message,
+// }),
+
+
+//       }
+//     );
+
+//     // 🔴 IMPORTANT: handle non-200 safely
+//     if (!res.ok) {
+//       throw new Error("Request failed");
+//     }
+
+//     const data = await res.json();
+
+//     if (data.success) {
+//       setStatus({
+//         type: "success",
+//         message: "Message sent successfully!",
+//       });
+
+//       setFormData({
+//         name: "",
+//         email: "",
+//         phone: "",
+//         address: "",
+//         message: "",
+//       });
+//     } else {
+//       setStatus({
+//         type: "error",
+//         message: "Failed to send message. Try again.",
+//       });
+//     }
+//   } catch (error) {
+//     console.error(error);
+
+//     setStatus({
+//       type: "error",
+//       message:
+//         "Unable to send message right now. Please try again later.",
+//     });
+//   } finally {
+//     setLoading(false);
+//   }
+// };
+
+
+const handleSubmit = (e) => {
   e.preventDefault();
-  setLoading(true);
-  setStatus({ type: "", message: "" });
 
-  try {
-    const res = await fetch(
-      "https://sheltercastle-production.up.railway.app/send-message",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
+  const phoneNumber = "919710696421"; 
+  // Replace with your real WhatsApp number
+  // Format: country code + number (no +, no spaces)
 
-       body: JSON.stringify({
-  name: formData.name,
-  email: formData.email,
-  phone: formData.phone,
-  address: formData.address,
-  message: formData.message,
-}),
+  const message = `
+New Contact Form Message:
 
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Address: ${formData.address}
+Message: ${formData.message}
+  `;
 
-      }
-    );
+  const encodedMessage = encodeURIComponent(message);
 
-    // 🔴 IMPORTANT: handle non-200 safely
-    if (!res.ok) {
-      throw new Error("Request failed");
-    }
+  const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-    const data = await res.json();
+  // Open WhatsApp
+  window.open(whatsappURL, "_blank");
 
-    if (data.success) {
-      setStatus({
-        type: "success",
-        message: "Message sent successfully!",
-      });
-
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        address: "",
-        message: "",
-      });
-    } else {
-      setStatus({
-        type: "error",
-        message: "Failed to send message. Try again.",
-      });
-    }
-  } catch (error) {
-    console.error(error);
-
-    setStatus({
-      type: "error",
-      message:
-        "Unable to send message right now. Please try again later.",
-    });
-  } finally {
-    setLoading(false);
-  }
+  // Optional: clear form
+  setFormData({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+    message: "",
+  });
 };
-
-
 
   return (
     <section id="contact" className="contact">
