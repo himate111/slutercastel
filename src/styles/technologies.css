@@ -355,3 +355,17 @@
 }
 
 
+
+.flat-extra-images {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.flat-extra-image {
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4 / 3;   /* keeps both images same proportion */
+  object-fit: cover;     /* crops nicely */
+  border-radius: 10px;
+}

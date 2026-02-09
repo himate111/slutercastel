@@ -167,7 +167,7 @@ Message: ${formData.message}
         {/* LEFT – FORM */}
         <div className="contact-form">
           <h2>
-            Have questions? <br /> get in touch!
+            Ready to buy <br /> your dream home!
           </h2>
 
           <form onSubmit={handleSubmit} className="contact-form-inner">

@@ -3,7 +3,7 @@ import { BrickWall, Home, Triangle, Square } from "lucide-react";
 import { useParams,useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-import topimage from "../assets/images/topimage.png";
+import topimage from "../assets/images/techno.png";
 
 import tulip from "../assets/images/ventura.jpg";
 import tulipright from "../assets/images/tulipright.png";
