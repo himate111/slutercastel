@@ -1,6 +1,7 @@
 import "../styles/technologies.css";
 import { BrickWall, Home, Triangle, Square } from "lucide-react";
 import { useParams,useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
 import topimage from "../assets/images/topimage.png";
 
@@ -40,6 +41,10 @@ import featherright from "../assets/images/featherright.png";
 export default function Technologies() {
   const { id } = useParams();
   const navigate = useNavigate();
+
+    useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   /* Project-wise data */
 const plans = {

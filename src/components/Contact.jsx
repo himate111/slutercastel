@@ -97,7 +97,7 @@ export default function Contact() {
 const handleSubmit = (e) => {
   e.preventDefault();
 
-  const phoneNumber = "919710696421"; 
+  const phoneNumber = "919176777004"; 
   // Replace with your real WhatsApp number
   // Format: country code + number (no +, no spaces)
 
