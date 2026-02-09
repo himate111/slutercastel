@@ -176,11 +176,21 @@ feather: {
 
       {/* Banner */}
 
-     <button className="back-button"
-     onClick={() => navigate("/#properties")}
-    >
+      <button
+  className="back-button"
+  onClick={() => {
+    navigate("/");
+    setTimeout(() => {
+      const section = document.getElementById("properties");
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }, 100);
+  }}
+>
   ← Back to Projects
 </button>
+
 
 
 
