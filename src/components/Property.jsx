@@ -31,7 +31,7 @@ const properties = [
     title: "NEST",
     location: "Mel Ayanambakkam, Chennai",
     img: nest,
-    floors: 3,
+    floors: 2,
   },
   {
     id: "blossom",

@@ -9,7 +9,7 @@ import tulip from "../assets/images/ventura.jpg";
 import tulipright from "../assets/images/tulipright.png";
 
 
-import tulipPlan from "../assets/images/plan.png";
+import tulipPlan from "../assets/images/tulipfllorplan.png";
 import nestPlan from "../assets/images/nestplan1.jpeg";
 import blossomPlan from "../assets/images/blossomplan.png";
 import florencePlan from "../assets/images/venturaplan.png";
@@ -57,7 +57,15 @@ const plans = {
     {
       name: "Flat A1",
       size: "1027 sq.ft",
-      features: ["2 Bedrooms", "Large living & dining area", "Kitchen with utility", "2 Toilets", "Private balcony", "Porch / entry space", "Well-ventilated layout",],
+      features: ["2 Bedrooms",
+  "Spacious living & dining area",
+  "Master bedroom",
+  "Common bedroom",
+  "Kitchen with utility",
+  "2 Toilets",
+  "Private balcony",
+  "Well-ventilated layout",
+  "Dedicated car parking",],
       description: "A spacious 2BHK home designed for comfortable family living. With a large living and dining area, well-planned bedrooms, and excellent ventilation, this layout offers both functionality and everyday comfort.",
       extraImage:
         tulipright,
@@ -92,7 +100,7 @@ blossom: {
     {
       name: "Flat C1",
       size: "900 sq.ft",
-      features: ["2 Bedrooms", "Living & dining area", "Kitchen with utility", "2 Toilets", "Balcony", "Well-ventilated layout",],
+      features: ["2 Bedrooms", "Living & dining area", "Kitchen with utility", "2 Toilets (attached + common)", "Balcony", "Well-ventilated layout", "Dedicated car parking",],
       description: "A smartly planned 2BHK layout that balances space and practicality. The spacious living area and well-defined bedrooms make it ideal for modern families seeking comfort and efficient design.",
       extraImage:
         blossom,
